@@ -40,6 +40,14 @@
     "vue-template-compiler": "^2.6.10",
     "vue": "^2.6.10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albertodeago/vue-aspect-ratio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albertodeago/vue-aspect-ratio/issues"
+  },
+  "homepage": "https://github.com/albertodeago/vue-aspect-ratio/blob/master/README.md",
   "jsdelivr": "dist/vue-aspect-ratio.umd.min.js",
   "license": "MIT",
   "sideeffects": false
