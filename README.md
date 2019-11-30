@@ -1,3 +1,5 @@
+![screenshot](https://raw.githubusercontent.com/albertodeago/vue-aspect-ratio/master/assets/screen.png)
+
 # vue-aspect-ratio
 
 A component to render a certain aspect ratio element.  
