@@ -2,9 +2,9 @@
 
 # vue-aspect-ratio
 
-A component to render a certain aspect ratio element.  
+A component to render a certain aspect ratio element without javascript computations.  
 It exposes a default slot that will have the desided ratio.  
-Weights 3.8kb not gzipped.
+Weights 3.8kb not gzipped. No dependencies.
 
 
 ## How to install and use
