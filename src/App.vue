@@ -110,23 +110,31 @@
       </div>
     </div>
 
-      <div class="show">
-        <vue-aspect-ratio ar="1:2" width="120px">
-          <div class="content content-4">
-            <div>AR 1:2</div>
-          </div>
-        </vue-aspect-ratio>
-        <vue-aspect-ratio ar="1:1" width="240px">
-          <div class="content content-4">
-            <div>Square</div>
-          </div>
-        </vue-aspect-ratio>
-        <vue-aspect-ratio ar="16:9" width="426px">
-          <div class="content content-4">
-            <div>16:9</div>
-          </div>
-        </vue-aspect-ratio>
-      </div>
+    <div class="show">
+      <vue-aspect-ratio ar="1:2" width="120px">
+        <div class="content content-4">
+          <div>AR 1:2</div>
+        </div>
+      </vue-aspect-ratio>
+      <vue-aspect-ratio ar="1:1" width="240px">
+        <div class="content content-4">
+          <div>Square</div>
+        </div>
+      </vue-aspect-ratio>
+      <vue-aspect-ratio ar="16:9" width="426px">
+        <div class="content content-4">
+          <div>16:9</div>
+        </div>
+      </vue-aspect-ratio>
+    </div>
+
+    <div class="show-gif">
+      <vue-aspect-ratio ar="16:9">
+        <div class="content content-4">
+          <div>16:9 fully responsive</div>
+        </div>
+      </vue-aspect-ratio>
+    </div>
   </div>
 </template>
 
@@ -136,6 +144,9 @@
   display: none;
   /* display: flex; */
   justify-content: space-around;
+}
+.show-gif {
+  display: none;
 }
 .show > div {
   box-shadow: 0px 0px 6px 3px;

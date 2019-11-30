@@ -4,7 +4,10 @@
 
 A component to render a certain aspect ratio element without javascript computations.  
 It exposes a default slot that will have the desided ratio.  
-Weights 3.8kb not gzipped. No dependencies.
+Weights 3.8kb not gzipped. No dependencies.  
+100% responsive
+
+![responsiveness gif](https://raw.githubusercontent.com/albertodeago/vue-aspect-ratio/master/assets/responsive.gif)
 
 
 ## How to install and use
