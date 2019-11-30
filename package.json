@@ -1,7 +1,7 @@
 {
   "author": "albertodeagostini.dev@gmail.com",
   "name": "vue-aspect-ratio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "docs": "npm run docs:serve",
     "docs:build": "vue-cli-service docs --mode build",
