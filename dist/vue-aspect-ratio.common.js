@@ -1,5 +1,5 @@
 /*!
- * vue-aspect-ratio v0.1.0 
+ * vue-aspect-ratio v0.1.1 
  * (c) 2019 albertodeagostini.dev@gmail.com
  * Released under the MIT License.
  */
@@ -60,6 +60,12 @@ function _nonIterableRest() {
 var script = {
   name: "VueAspectRatio",
   props: {
+    /**
+     * Aspect Ratio.
+     * String with the following pattern
+     * <aspect_ratio_width>:<aspect_ratio_height>
+     * Default is "1:1" meaning that the component will be a square
+     */
     ar: {
       type: String,
       default: "1:1",
@@ -73,7 +79,13 @@ var script = {
 
         return !Number.isNaN(w) && !Number.isNaN(h);
       }
-    }
+    },
+
+    /**
+     * Width to set to the component.
+     * Optional, if not set the width will be 100% like a normal "div" element
+     */
+    width: String
   },
   data: function data() {
     return {
@@ -84,15 +96,27 @@ var script = {
     };
   },
   computed: {
+    /**
+     * Style for the outer div element, this can just set the width of the component itself
+     */
+    componentStyle: function componentStyle() {
+      return this.width ? {
+        width: this.width
+      } : {};
+    },
+
+    /**
+     * Style for the inner div element, this will define the aspect ratio
+     */
     innerStyle: function innerStyle() {
-      // set the padding, this is actually what gives the aspect ratio
+      // set the padding top, this is actually what gives the aspect ratio
       return {
         paddingTop: this.h / this.w * 100 + "%"
       };
     }
   },
   created: function created() {
-    // set w and h data
+    // set w and h data parsing the ar prop
     var _this$ar$split$map = this.ar.split(":").map(function (v) {
       return parseInt(v);
     }),
@@ -246,17 +270,17 @@ var browser = createInjector;
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-aspect-ratio"},[_c('div',{staticClass:"vue-aspect-ratio__inner",style:(_vm.innerStyle)},[_c('div',{staticClass:"vue-aspect-ratio__content"},[_vm._t("default")],2)])])};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-aspect-ratio",style:(_vm.componentStyle)},[_c('div',{staticClass:"vue-aspect-ratio__inner",style:(_vm.innerStyle)},[_c('div',{staticClass:"vue-aspect-ratio__content"},[_vm._t("default")],2)])])};
 var __vue_staticRenderFns__ = [];
 
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-69342252_0", { source: ".vue-aspect-ratio__inner[data-v-69342252]{position:relative}.vue-aspect-ratio__content[data-v-69342252]{position:absolute;top:0;left:0;width:100%;height:100%}", map: undefined, media: undefined });
+    inject("data-v-f0460d78_0", { source: ".vue-aspect-ratio__inner[data-v-f0460d78]{position:relative}.vue-aspect-ratio__content[data-v-f0460d78]{position:absolute;top:0;left:0;width:100%;height:100%}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__ = "data-v-69342252";
+  const __vue_scope_id__ = "data-v-f0460d78";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */
