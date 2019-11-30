@@ -1,17 +1,30 @@
 {
+  "author": "albertodeagostini.dev@gmail.com",
   "name": "vue-aspect-ratio",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "docs": "npm run docs:serve",
+    "docs:build": "vue-cli-service docs --mode build",
+    "docs:serve": "vue-cli-service docs --mode serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:open": "npx cypress open",
+    "test": "npx cypress run",
+    "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build"
   },
+  "main": "dist/vue-aspect-ratio.common.js",
+  "module": "dist/vue-aspect-ratio.esm.js",
+  "unpkg": "dist/vue-aspect-ratio.umd.min.js",
+  "files": [
+    "dist/vue-aspect-ratio.common.js",
+    "dist/vue-aspect-ratio.umd.min.js",
+    "dist/vue-aspect-ratio.umd.js",
+    "dist/vue-aspect-ratio.esm.js",
+    "src"
+  ],
   "dependencies": {
-    "core-js": "^3.3.2",
-    "vue": "^2.6.10"
+    "core-js": "^3.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
@@ -23,6 +36,11 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
-  }
+    "vue-cli-plugin-p11n": "^0.4.0",
+    "vue-template-compiler": "^2.6.10",
+    "vue": "^2.6.10"
+  },
+  "jsdelivr": "dist/vue-aspect-ratio.umd.min.js",
+  "license": "MIT",
+  "sideeffects": false
 }
