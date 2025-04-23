@@ -9,6 +9,8 @@ Weights 3.8kb not gzipped. No dependencies.
 
 ![responsiveness gif](https://raw.githubusercontent.com/albertodeago/vue-aspect-ratio/master/assets/responsive.gif)
 
+<a href="https://www.buymeacoffee.com/albertodeago" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 
 ## How to install and use
 
